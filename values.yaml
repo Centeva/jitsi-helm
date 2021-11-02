@@ -4,16 +4,6 @@ namespace: jitsi
 # extraPodSpec can be used to add tolerations and placement hints
 # to any of the following components
 
-haproxy:
-  name: haproxy
-  image: haproxy:2.3
-  ingressEnable: true
-  ingress:
-    # can be alb
-    class: haproxy
-    host: jitsi.example.org
-    tlsEnable: true
-    # albGroup: global
 jicofo:
   name: jicofo
   image: jitsi/jicofo:stable-5963
