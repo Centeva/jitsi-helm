@@ -40,4 +40,4 @@ helmCharts:
 ```
 ## Contributing
 
-Pushing to main will automatically deploy a new version of the chart using the release.yml workflow.
+Pushing to main will automatically deploy a new version of the chart using the release.yml workflow however **You need to bump the version number in the Chart.yaml manually** in order for a release to be created.
