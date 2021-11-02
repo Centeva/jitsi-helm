@@ -3,6 +3,16 @@ entries:
   centeva-jitsi:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2021-11-02T17:03:18.780585558Z"
+    description: HA-Jitsi chart
+    digest: 697ee6ed6a0516df429b4e1396574b205d21bd2631349813f46436adfecda767
+    name: centeva-jitsi
+    type: application
+    urls:
+    - https://github.com/Centeva/jitsi-helm/releases/download/centeva-jitsi-0.4.0/centeva-jitsi-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2021-11-02T16:56:46.116094589Z"
     description: HA-Jitsi chart
     digest: fb4f9bd5687882f4f69afd5ce1991fee436a609721646302f07d8bff1d738b8e
@@ -21,4 +31,4 @@ entries:
     urls:
     - https://github.com/Centeva/jitsi-helm/releases/download/centeva-jitsi-0.2.0/centeva-jitsi-0.2.0.tgz
     version: 0.2.0
-generated: "2021-11-02T16:56:46.116105789Z"
+generated: "2021-11-02T17:03:18.780598059Z"
