@@ -13,4 +13,3 @@ metadata:
   labels:
     scope: jitsi
   name: web
-  namespace: {{ $.Values.namespace }}

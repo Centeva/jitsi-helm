@@ -7,4 +7,3 @@ metadata:
   labels:
     scope: jitsi
   name: jvb-entrypoint
-  namespace: {{ $.Values.namespace }}

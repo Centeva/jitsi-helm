@@ -8,7 +8,6 @@ metadata:
     scope: jitsi
     shard: {{ $shard | quote}}
   name: shard-{{ $shard }}-{{ $.Values.jicofo.name }}
-  namespace: {{ $.Values.namespace }}
 spec:
   replicas: 1
   selector:

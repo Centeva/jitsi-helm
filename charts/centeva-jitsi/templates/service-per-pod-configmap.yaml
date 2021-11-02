@@ -3,7 +3,6 @@ kind: ConfigMap
 apiVersion: v1
 metadata:
   name: service-per-pod-hooks
-  namespace: {{ $.Values.namespace }}
   labels:
     scope: jitsi
 data:

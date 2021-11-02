@@ -7,4 +7,3 @@ metadata:
   labels:
     scope: jitsi
   name: jvb-shutdown
-  namespace: {{ $.Values.namespace }}

@@ -5,7 +5,6 @@ metadata:
     scope: jitsi
     service: {{ $.Values.web.name }}
   name: {{ $.Values.web.name }}
-  namespace: {{ $.Values.namespace }}
 spec:
   clusterIP: None
   ports:

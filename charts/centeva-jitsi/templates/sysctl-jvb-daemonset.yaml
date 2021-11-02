@@ -9,7 +9,6 @@ metadata:
     k8s-app: sysctl-jvb
     scope: jitsi
   name: sysctl-jvb
-  namespace: {{ $.Values.namespace }}
 spec:
   selector:
     matchLabels:

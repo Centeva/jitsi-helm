@@ -1,5 +1,4 @@
 shardCount: 1
-namespace: jitsi
 
 # extraPodSpec can be used to add tolerations and placement hints
 # to any of the following components

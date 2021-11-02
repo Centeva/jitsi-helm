@@ -8,7 +8,6 @@ metadata:
     service: {{ $.Values.prosody.name }}
     shard: {{ $shard | quote}}
   name: shard-{{ $shard }}-{{ $.Values.prosody.name }}
-  namespace: {{ $.Values.namespace }}
 spec:
   ports:
   - name: "5222"
