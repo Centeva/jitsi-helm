@@ -3,6 +3,8 @@ shardCount: 1
 # extraPodSpec can be used to add tolerations and placement hints
 # to any of the following components
 
+extraEnvConfigName: ""
+
 jicofo:
   name: jicofo
   image: jitsi/jicofo:stable-5963

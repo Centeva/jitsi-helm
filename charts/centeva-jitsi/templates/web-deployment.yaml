@@ -60,6 +60,11 @@ spec:
             secretKeyRef:
               name: jitsi-config
               key: PUBLIC_URL
+        {{- if $.Values.extraEnvConfigName }}
+        envFrom:
+        - configMapRef:
+            name: {{ $.Values.extraEnvConfigName }}
+        {{ end }}
         image: {{ $.Values.web.image }}
         imagePullPolicy: {{ $.Values.web.imagePullPolicy }}
         name: web
