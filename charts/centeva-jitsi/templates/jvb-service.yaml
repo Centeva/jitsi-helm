@@ -3,9 +3,9 @@
 apiVersion: "v1"
 kind: "Service"
 metadata:
-  name: {{ $.Values.jvb.name }}-service-{{ $shard | quote }}
+  name: {{ $.Values.jvb.name }}-service-{{ $shard }}
   labels:
-    app: jvb-service-{{ $shard | quote }}
+    app: jvb-service-{{ $shard }}
     scope: jitsi
     shard: {{ $shard | quote }}
 spec:
