@@ -23,7 +23,7 @@ spec:
     {{- with $.Values.jvb.extraPodSpec }}
       {{- toYaml . | nindent 6 }}
     {{- end }}
-      hostNetwork: yes
+      hostNetwork: true
       containers:
       - name: sysctl-jvb
         image: alpine

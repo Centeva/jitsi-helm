@@ -1,0 +1,47 @@
+{{- range $shard, $e := until (int $.Values.shardCount) }}
+---
+apiVersion: "v1"
+kind: "Service"
+metadata:
+  name: statefulset.metadata.name + "-" + index
+  labels:
+    app: jvb-service-{{ $shard | quote }}
+    scope: jitsi
+    shard: {{ $shard | quote }}
+spec:
+  ports:
+  - name: "jvb-udp"
+    port: 30300
+    protocol: "UDP"
+    targetPort: 30300
+  - name: "jvb-tcp"
+    port: 30301
+    protocol: "TCP"
+    targetPort: 30301
+  selector:
+    k8s-app: {{ $.Values.jvb.name }}
+    scope: jitsi
+    shard: {{ $shard | quote}}
+{{ end }}
+---
+apiVersion: "v1"
+kind: "Service"
+metadata:
+  name: statefulset.metadata.name + "-" + index
+  labels:
+    app: jvb-headless-service
+    scope: jitsi
+spec:
+  clusterIP: None
+  selector:
+    k8s-app: {{ $.Values.jvb.name }}
+    scope: jitsi
+  ports:
+  - name: "jvb-tcp"
+    protocol: TCP
+    port: 80
+    targetPort: 30301
+  - name: "jvb-udp"
+    protocol: UDP
+    port: 10000
+    targetPort: 30300

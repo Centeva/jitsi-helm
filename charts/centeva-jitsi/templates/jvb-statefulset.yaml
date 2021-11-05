@@ -10,7 +10,7 @@ metadata:
   name: shard-{{ $shard }}-{{ $.Values.jvb.name }}
   # needed for metacontroller to create/delete service per pod
   annotations:
-    service-per-pod-label: "statefulset.kubernetes.io/pod-name"
+    # service-per-pod-label: "statefulset.kubernetes.io/pod-name" remove to disable metacontroller
 spec:
   podManagementPolicy: Parallel
   replicas: {{ $.Values.jvb.replicas }}
